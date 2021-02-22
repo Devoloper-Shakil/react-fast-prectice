@@ -5,21 +5,33 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
+       
+       <Hedding></Hedding>
+       <Hedding></Hedding>
+       <Hedding></Hedding>
+       <Hedding></Hedding>
+       <Hedding></Hedding>
+        
+       
       </header>
     </div>
   );
+}
+function Hedding() {
+ const heddingStyle={
+    border:'2px solidred',
+    margin:'10px',
+    background:'red'
+  }
+
+  return(
+    <div style= {heddingStyle}>
+      <h1 >Bangladhe is a very small</h1>
+      <h2 >bangli prepul is a fonni</h2>
+    </div>
+  );
+  
 }
 
 export default App;
