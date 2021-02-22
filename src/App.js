@@ -7,28 +7,30 @@ function App() {
       <header className="App-header">
        
        
-       <Hedding></Hedding>
-       <Hedding></Hedding>
-       <Hedding></Hedding>
-       <Hedding></Hedding>
-       <Hedding></Hedding>
+       <Hedding name="Manna" sylary="5000"></Hedding>
+       <Hedding name="Fime" sylary="4000"></Hedding>
+       <Hedding name="Nayn" sylary="588000"></Hedding>
+       <Hedding name="Ala min" sylary="55000"></Hedding>
+       <Hedding name="Bijoy" sylary="500090"></Hedding>
         
        
       </header>
     </div>
   );
 }
-function Hedding() {
+function Hedding(props) {
  const heddingStyle={
-    border:'2px solidred',
+    border:'2px solid Yellow',
     margin:'10px',
-    background:'red'
+   
+   
+    
   }
 
   return(
     <div style= {heddingStyle}>
-      <h1 >Bangladhe is a very small</h1>
-      <h2 >bangli prepul is a fonni</h2>
+      <h1 >Banglar Don:{props.name}</h1>
+      <h2 >Banglar Doner Sylarey:{props.sylary}</h2>
     </div>
   );
   
