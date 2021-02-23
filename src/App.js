@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       
-       
+       <LoveCount></LoveCount>
+       <MoveCount></MoveCount>
        <Hedding name="Manna" sylary="5000"></Hedding>
        <Hedding name="Fime" sylary="4000"></Hedding>
        <Hedding name="Nayn" sylary="588000"></Hedding>
@@ -26,6 +27,7 @@ function Hedding(props) {
    
     
   }
+ 
 
   return(
     <div style= {heddingStyle}>
@@ -35,5 +37,46 @@ function Hedding(props) {
   );
   
 }
+
+ function MoveCount() {
+  const [count,setCount]= useState(10);
+
+ const clickHendeler=()=>{setCount(count+1);  }
+ const decreg =()=>{
+   if(count>0){
+    setCount(count-1);}
+   }
+  
+    return(
+      <div> 
+        <h3>counter:{count}</h3>
+        <button onClick={clickHendeler}>click count</button>
+        <button onClick={decreg}>decrege</button>
+      </div>
+    )
+    
+  }
+
+  function LoveCount() {
+    const [love, setLove]= useState(0);
+    const loveHendel=()=>{
+      setLove(love+1);
+    }
+    const hedHendel=()=>{
+      if(love>0){
+        setLove(love-1);
+      }
+    }
+
+    return(
+      <div>
+        <h1>Love Counter</h1>
+        <h3>Love Count:{love}</h3>
+        <button onClick={loveHendel}>Love</button>
+        <button onClick={hedHendel}>heard</button>
+      </div>
+    )
+    
+  }
 
 export default App;
