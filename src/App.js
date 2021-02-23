@@ -3,9 +3,15 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  const frends=[{name:"himel", age:20} ,{name:"shakil", age:25} ,{name:"alamin", age:22}]
+  
   return (
     <div className="App">
       <header className="App-header">
+      {
+       frends.map(frend=><Freands name={frend.name} age={frend.age} ></Freands>)
+      }
+        
        <LoveCount></LoveCount>
        <MoveCount></MoveCount>
        <Hedding name="Manna" sylary="5000"></Hedding>
@@ -76,6 +82,15 @@ function Hedding(props) {
         <button onClick={hedHendel}>heard</button>
       </div>
     )
+    
+  }
+  function Freands(props) {
+  return(
+    <div>
+       <h1>Name: {props.name}</h1>
+        <h2>Roll: {props.age}</h2> 
+    </div>
+  ) 
     
   }
 
